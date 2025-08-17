@@ -67,7 +67,11 @@ const Login = () => {
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600"
           >
-            {showPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
+            {showPassword ? (
+              <AiOutlineEyeInvisible size={20} />
+            ) : (
+              <AiOutlineEye size={20} />
+            )}
           </button>
         </div>
 
@@ -77,6 +81,12 @@ const Login = () => {
         >
           Login
         </button>
+        <p className="text-center mt-4">
+          Don’t have an account?{" "}
+          <a href="/signup" className="text-blue-600 hover:underline">
+            Sign up
+          </a>
+        </p>
       </form>
     </div>
   );
